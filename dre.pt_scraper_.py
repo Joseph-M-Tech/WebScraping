@@ -52,9 +52,7 @@ for i in range(1,5):
 
     response = requests.get('https://dre.pt/web/guest/home/-/dre/144452178/details/maximized', headers=headers, params=params )
 
-    #NB. Original query string below. It seems impossible to parse and
-    #reproduce query strings 100% accurately so the one below is given
-    #in case the reproduced version is not "correct".
+
     # response = requests.get('https://dre.pt/web/guest/home/-/dre/144452178/details/maximized?serie=II^&at=c^&parte_filter=41', headers=headers, cookies=cookies)
 
     html = response.text
@@ -70,6 +68,7 @@ for i in range(1,5):
         master_listing.append(post)
 
 
+#output dataframe-csv
 
 df = pd.DataFrame(master_listing)
 df.to_csv('dre_final_trial.csv',index = False)
