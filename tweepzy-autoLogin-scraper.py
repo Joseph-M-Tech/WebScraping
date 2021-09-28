@@ -55,7 +55,6 @@ driver.implicitly_wait(60)
 driver.find_element_by_link_text("Latest").click()
 
 #get all tweets on the page
-
 data = []
 tweet_ids = set()
 last_position = driver.execute_script("return window.paggeYOffset;")
@@ -93,6 +92,8 @@ while scrolling:
             last_position = curr_position
             break
 
+
+#output the data in csv
 with open('data_tweet.csv', 'w', newline ='', encoding = 'utf-8') as f:
     header = ['Username', 'Handle', 'Timestamp', 'Comments', 'Likes', 'Retweets', 'Text']
     writer = csv.writer(f)

@@ -98,53 +98,9 @@ df = pd.DataFrame(master_jobs)
 # In[6]:
 
 
-
+#Output a csv file
 df.to_csv('finalSa_jobs_output.csv',index = False)
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
